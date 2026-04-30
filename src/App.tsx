@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="min-w-100 md:min-h-240 bg-scroll md:bg-fixed bg-center bg-cover bg-[url('/bg-top.jpg')]">
+    <div className="min-w-100 md:min-h-240 md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-top.jpg')] bg-[url('/bg-full.jpg')]">
       <section className="md:min-h-280">
         <div className="flex flex-row justify-end p-16">
           <div className="font-family-lato font-normal text-paler flex gap-8 align-center">
@@ -75,7 +75,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="md:min-h-210 bg-scroll md:bg-fixed bg-center bg-cover bg-[url('/bg-bottom.jpg')]">
+      <section className="md:min-h-210 md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-bottom.jpg')]">
         <div className="flex justify-center pb-8">
           <div className="flex flex-col">
             <div className="flex justify-end mt-16 mb-6">
