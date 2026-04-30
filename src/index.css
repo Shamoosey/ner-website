@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --color-brown: #270915;
+  --color-maroon: #471528;
+  --color-dirt: #812c02;
+  --color-pale: #ffe7a8;
+  --color-paler: #fff3d2;
+
+  --font-family-lato: "Lato", sans-serif;
+  --font-family-times: "Times New Roman", Times, serif;
+}
