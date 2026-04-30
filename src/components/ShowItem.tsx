@@ -9,7 +9,7 @@ export interface ShowItemProps {
 export function ShowItem(props: ShowItemProps) {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-between font-bold">
+      <div className="flex justify-between font-bold flex-col md:flex-row">
         <span className="uppercase">
           {props.data.date.toLocaleDateString("en-US", {
             year: "numeric",

@@ -20,9 +20,13 @@ function App() {
     },
   ]);
 
+  function getActiveShows() {
+    return showData.filter((x) => x.date >= new Date(new Date().setHours(0, 0, 0, 0)));
+  }
+
   return (
-    <div className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-top.jpg')]">
-      <section className="min-h-280 bg-center bg-fixed bg-cover bg-[url('/bg-top.jpg')]">
+    <div className="min-w-100 md:min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-top.jpg')]">
+      <section className="md:min-h-280">
         <div className="flex flex-row justify-end p-16">
           <div className="font-family-lato font-normal text-paler flex gap-8 align-center">
             <span className="border-b-1 cursor-pointer border-grey text-xl">
@@ -30,61 +34,56 @@ function App() {
             </span>
           </div>
         </div>
-        <img src={logo} alt="Main Logo" className="h-150 p-12 mt-4" />
+        <img src={logo} alt="Main Logo" className="md:h-150 p-12" />
       </section>
-      <section className="min-h-240">
-        <div className="flex justify-center h-70">
-          <div className="absolute top-250 flex flex-col">
+      <section className="md:min-h-240">
+        <div className="flex justify-center md:min-h-100 ">
+          <div className="flex flex-col px-8">
             <div className="flex justify-end">
-              <span className="font-bold text-5xl italic font-family-times text-paler pb-4">
-                EP "TV Dinner" OUT MAY 29
-              </span>
+              <span className="font-bold md:text-5xl text-2xl italic font-family-times text-paler pb-4">EP "TV Dinner" OUT MAY 29</span>
             </div>
-            <img src={TVDinnerArt} className="h-200" />
+            <img src={TVDinnerArt} className="max-h-200 w-200" />
             <div className="m-auto mt-8">
               <Button className="px-8 py-1.5">LISTEN</Button>
             </div>
           </div>
         </div>
-        <div className="bg-brown text-paler min-h-60 mt-[600px]">
-          <div className="flex justify-center">
-            <div className="m-16 w-200">
-              <div className="mb-8">
-                <span
-                  className="font-family-times text-4xl italic 
+      </section>
+      <section className="bg-brown text-paler md:min-h-60 mt-10">
+        <div className="flex justify-center">
+          <div className="m-16 w-200">
+            <div className="mb-8">
+              <span
+                className="font-family-times text-4xl italic 
               font-bold">
-                  UPCOMING SHOWS
-                </span>
-              </div>
-              <div className="flex flex-col w-120 font-family-lato gap-10 mt-4">
-                {showData.length == 0 ? (
-                  <div>
-                    <span className="text-lg">No Shows Currently Scheduled</span>
-                  </div>
-                ) : (
-                  <>
-                    {showData
-                      .filter((x) => x.date >= new Date(new Date().setHours(0, 0, 0, 0)))
-                      .map((x) => (
-                        <ShowItem data={x} />
-                      ))}
-                  </>
-                )}
-              </div>
+                UPCOMING SHOWS
+              </span>
+            </div>
+            <div className="flex flex-col md:w-120 font-family-lato gap-10 mt-4">
+              {getActiveShows().length == 0 ? (
+                <div>
+                  <span className="text-lg">More shows coming soon...</span>
+                </div>
+              ) : (
+                <>
+                  {getActiveShows().map((x) => (
+                    <ShowItem data={x} />
+                  ))}
+                </>
+              )}
             </div>
           </div>
         </div>
       </section>
-      <section className="min-h-210 bg-fixed bg-center bg-cover bg-[url('/bg-bottom.jpg')]">
-        <div className="flex justify-center h-70">
+      <section className="md:min-h-210 bg-fixed bg-center bg-cover bg-[url('/bg-bottom.jpg')]">
+        <div className="flex justify-center pb-8">
           <div className="flex flex-col">
             <div className="flex justify-end mt-16 mb-6">
               <span className="font-bold text-4xl italic font-family-times text-brown">VIDEOS</span>
             </div>
-            <div className="flex justify-center">
+            <div className="relative">
               <iframe
-                width="800"
-                height="600"
+                className="md:w-200 md:h-150 w-80 h-60 sm:w-100 sm:h-80"
                 src="https://www.youtube.com/embed/elYe9Qb6SUw"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -100,8 +99,8 @@ function App() {
         </div>
       </section>
       <section className="bg-dirt">
-        <div className="flex justify-center h-40 py-16">
-          <div className="flex justify-end w-200 gap-4">
+        <div className="flex justify-center h-40 py-16 ">
+          <div className="flex justify-end gap-4 md:w-200">
             <span className="text-paler italic font-family-lato font-bold">naked.elevator.ride@gmail.com</span>
             <Link to="">
               <SpotifyIcon size={28} />
