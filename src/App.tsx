@@ -4,6 +4,9 @@ import TVDinnerArt from "./assets/TV-Dinner_EP-Art.jpg";
 import type { ShowData } from "./interfaces/ShowData";
 import { ShowItem } from "./components/ShowItem";
 import { Button } from "./components/Button";
+import SpotifyIcon from "./components/icons/SpotifyIcon";
+import { YoutubeIcon } from "./components/icons/YoutubeIcon";
+import { InstagramIcon } from "./components/icons/InstagramIcon";
 
 function App() {
   const [showData, setShowData] = useState<ShowData[]>([
@@ -17,8 +20,8 @@ function App() {
   ]);
 
   return (
-    <>
-      <section className="min-h-280  bg-center bg-cover bg-[url('/bg-top.jpg')]">
+    <div className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-full.jpg')]">
+      <section className="min-h-280 bg-center bg-cover bg-[url('/bg-top.jpg')]">
         <div className="flex flex-row justify-end p-16">
           <div className="font-family-lato font-normal text-paler flex gap-8 align-center">
             <span className="border-b-1 cursor-pointer border-grey text-xl">
@@ -26,13 +29,15 @@ function App() {
             </span>
           </div>
         </div>
-        <img src={logo} alt="Main Logo" className="h-150 p-12 mt-16" />
+        <img src={logo} alt="Main Logo" className="h-150 p-12 mt-4" />
       </section>
-      <section className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-full.jpg')]">
+      <section className="min-h-240">
         <div className="flex justify-center h-70">
           <div className="absolute top-250 flex flex-col">
             <div className="flex justify-end">
-              <span className="font-bold text-5xl italic font-family-times text-paler pb-4">EP "TV Dinner" OUT MAY 29</span>
+              <span className="font-bold text-5xl italic font-family-times text-paler pb-4">
+                EP "TV Dinner" OUT MAY 29
+              </span>
             </div>
             <img src={TVDinnerArt} className="h-200" />
             <div className="m-auto mt-8">
@@ -69,7 +74,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-flipped.jpg')]">
+      <section className="min-h-210">
         <div className="flex justify-center h-70">
           <div className="flex flex-col">
             <div className="flex justify-end mt-16 mb-6">
@@ -91,8 +96,17 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="bg-dirt h-40"></section>
-    </>
+      <section className="bg-dirt">
+        <div className="flex justify-center h-40 py-16">
+          <div className="flex justify-end w-200 gap-4">
+            <span className="text-paler italic font-family-lato font-bold">naked.elevator.ride@gmail.com</span>
+            <SpotifyIcon size={28} />
+            <YoutubeIcon size={28} />
+            <InstagramIcon size={28} />
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
