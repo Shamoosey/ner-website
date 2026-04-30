@@ -7,6 +7,7 @@ import { Button } from "./components/Button";
 import SpotifyIcon from "./components/icons/SpotifyIcon";
 import { YoutubeIcon } from "./components/icons/YoutubeIcon";
 import { InstagramIcon } from "./components/icons/InstagramIcon";
+import { Link } from "react-router";
 
 function App() {
   const [showData, setShowData] = useState<ShowData[]>([
@@ -91,7 +92,9 @@ function App() {
               />
             </div>
             <div className="flex justify-center mt-8">
-              <Button className="italic">WATCH THE 'TUBE</Button>
+              <Link to="https://www.youtube.com/@NakedElevatorRide">
+                <Button className="italic">WATCH THE 'TUBE</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -100,9 +103,15 @@ function App() {
         <div className="flex justify-center h-40 py-16">
           <div className="flex justify-end w-200 gap-4">
             <span className="text-paler italic font-family-lato font-bold">naked.elevator.ride@gmail.com</span>
-            <SpotifyIcon size={28} />
-            <YoutubeIcon size={28} />
-            <InstagramIcon size={28} />
+            <Link to="">
+              <SpotifyIcon size={28} />
+            </Link>
+            <Link to="https://www.youtube.com/@NakedElevatorRide">
+              <YoutubeIcon size={28} />
+            </Link>
+            <Link to="https://www.instagram.com/naked.elevator.ride">
+              <InstagramIcon size={28} />
+            </Link>
           </div>
         </div>
       </section>
