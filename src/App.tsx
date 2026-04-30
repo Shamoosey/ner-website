@@ -21,8 +21,8 @@ function App() {
   ]);
 
   return (
-    <div className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-full.jpg')]">
-      <section className="min-h-280 bg-center bg-cover bg-[url('/bg-top.jpg')]">
+    <div className="min-h-240 bg-fixed bg-center bg-cover bg-[url('/bg-top.jpg')]">
+      <section className="min-h-280 bg-center bg-fixed bg-cover bg-[url('/bg-top.jpg')]">
         <div className="flex flex-row justify-end p-16">
           <div className="font-family-lato font-normal text-paler flex gap-8 align-center">
             <span className="border-b-1 cursor-pointer border-grey text-xl">
@@ -75,7 +75,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="min-h-210">
+      <section className="min-h-210 bg-fixed bg-center bg-cover bg-[url('/bg-bottom.jpg')]">
         <div className="flex justify-center h-70">
           <div className="flex flex-col">
             <div className="flex justify-end mt-16 mb-6">
