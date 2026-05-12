@@ -35,7 +35,7 @@ export function ShowItem(props: ShowItemProps) {
       </div>
       <div>
         <Link to={props.data.ticketLink}>
-          <Button>GET THE TICKET</Button>
+          <Button>TICKETS</Button>
         </Link>
       </div>
     </div>

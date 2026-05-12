@@ -1,7 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/NER-Logo.svg";
 import TVDinnerArt from "../assets/TV-Dinner_EP-Art.jpg";
-import { Link } from "react-router";
 import type { ShowData } from "../interfaces/ShowData";
 import { Button } from "../components/Button";
 import { ShowItem } from "../components/ShowItem";
@@ -19,27 +18,35 @@ function Home({ data }: HomeProps) {
   }
 
   return (
-    <div className="bg-brown min-w-100 md:min-h-240 md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-top.jpg')] bg-[url('/bg-full.jpg')]">
-      <section className="md:min-h-280">
+    <div className="bg-brown min-w-200 md:min-h-240 flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')]">
+      <section>
         <div className="flex flex-row justify-end p-16">
           <div className="font-family-lato font-normal text-paler flex gap-8 align-center">
             <span className="border-b-1 cursor-pointer border-grey text-xl">
-              <a href="mailto:naked.elevator.ride@gmail.com">Contact</a>
+              <a href="mailto:naked.elevator.ride@gmail.com">CONTACT</a>
             </span>
           </div>
         </div>
-        <img src={logo} alt="Main Logo" className="md:h-150 p-12" />
+      </section>
+      <section className="md:min-h-160 min-h-140">
+        <div className="flex justify-center">
+          <img src={logo} alt="Main Logo" className="md:w-200 w-180" />
+        </div>
       </section>
       <section className="md:min-h-240">
-        <div className="flex justify-center md:min-h-100 ">
+        <div className="flex justify-center">
           <div className="flex flex-col px-8">
-            <div className="flex justify-end">
-              <span className="font-bold md:text-5xl text-2xl italic font-family-times text-paler pb-4">EP "TV Dinner" OUT MAY 29</span>
+            <div className="flex">
+              <div className="flex flex-col gap-2 pb-6">
+                <span className="font-bold text-xl font-family-lato text-paler bg-dark p-1.5 uppercase">
+                  EP "TV Dinner", OUT MAY 28, 2026
+                </span>
+                <div className="">
+                  <Button className="px-8 py-1.5">LISTEN NOW</Button>
+                </div>
+              </div>
             </div>
             <img src={TVDinnerArt} className="max-h-200 w-200" />
-            <div className="m-auto mt-8">
-              <Button className="px-8 py-1.5">LISTEN</Button>
-            </div>
           </div>
         </div>
       </section>
@@ -69,25 +76,17 @@ function Home({ data }: HomeProps) {
           </div>
         </div>
       </section>
-      <section className="md:min-h-210 md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-bottom.jpg')]">
-        <div className="flex justify-center pb-8">
+      <section className="md:min-h-160 md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-bottom.jpg')]">
+        <div className="flex justify-center py-16">
           <div className="flex flex-col">
-            <div className="flex justify-end mt-16 mb-6">
-              <span className="font-bold text-4xl italic font-family-times text-brown">VIDEOS</span>
-            </div>
             <div className="relative">
               <iframe
-                className="md:w-200 md:h-150 w-80 h-60 sm:w-100 sm:h-80"
+                className="md:w-180 md:h-140 w-140 h-100 sm:w-160 sm:h-120"
                 src="https://www.youtube.com/embed/elYe9Qb6SUw"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
-            </div>
-            <div className="flex justify-center mt-8">
-              <Link to="https://www.youtube.com/@NakedElevatorRide">
-                <Button className="italic">WATCH THE 'TUBE</Button>
-              </Link>
             </div>
           </div>
         </div>

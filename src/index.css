@@ -15,6 +15,7 @@
 }
 
 @theme {
+  --color-dark: #161817;
   --color-brown: #270915;
   --color-maroon: #471528;
   --color-dirt: #812c02;
