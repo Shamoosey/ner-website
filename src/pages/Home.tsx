@@ -76,7 +76,7 @@ function Home({ data }: HomeProps) {
         <div className="flex justify-center py-16 px-4 md:px-8">
           <div className="w-full max-w-5xl">
             <iframe
-              className="aspect-video"
+              className="aspect-video w-full"
               src="https://www.youtube.com/embed/elYe9Qb6SUw"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
