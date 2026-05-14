@@ -1,7 +1,10 @@
 export interface ShowData {
-  tite: string;
+  id: string;
+  title: string;
   location: string;
   featuring: string;
-  ticketLink: string;
+  ticketUrl: string;
   date: Date;
+  createdAt: Date;
+  updatedAt: Date;
 }

@@ -1,20 +1,18 @@
-import { useState } from "react";
 import logo from "../assets/NER-Logo.svg";
 import TVDinnerArt from "../assets/TV-Dinner_EP-Art.jpg";
-import type { ShowData } from "../interfaces/ShowData";
 import { Button } from "../components/Button";
 import { ShowItem } from "../components/ShowItem";
 import { Footer } from "../components/Footer";
+import { useShowData } from "../hooks/useShowData";
 
-interface HomeProps {
-  data: ShowData[];
-}
+function Home() {
+  const { data = [] } = useShowData();
 
-function Home({ data }: HomeProps) {
-  const [showData, setShowData] = useState<ShowData[]>(data);
+  console.log(data);
 
   function getActiveShows() {
-    return showData.filter((x) => x.date >= new Date(new Date().setHours(0, 0, 0, 0)));
+    const today = new Date(new Date().setHours(0, 0, 0, 0));
+    return data.filter((x) => new Date(x.date) >= today);
   }
 
   return (
@@ -22,7 +20,7 @@ function Home({ data }: HomeProps) {
       <section>
         <div className="flex flex-row justify-end px-4 md:px-8 py-8">
           <div className="font-normal text-paler flex gap-8 align-center">
-            <span className="border-b-1 cursor-pointer border-grey text-xl">
+            <span className="cursor-pointer hover:underline text-xl">
               <a href="mailto:naked.elevator.ride@gmail.com">CONTACT</a>
             </span>
           </div>
