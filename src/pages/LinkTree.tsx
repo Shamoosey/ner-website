@@ -23,9 +23,9 @@ export function LinkTree() {
             ) : (
               data.map((x, i) => (
                 <Link to={x.url} key={i}>
-                  <div className="flex justify-start items-center gap-4 text-paler bg-dark rounded p-2 hover:text-dark hover:bg-paler transition duration-150 cursor-pointer">
-                    <DynamicIcon name={x.icon} className="w-8 h-8" />
-                    <span>{x.text}</span>
+                  <div className="flex justify-start items-center gap-4 text-paler bg-dark rounded p-3 hover:text-dark hover:bg-paler transition duration-150 cursor-pointer">
+                    <DynamicIcon name={x.icon} className="w-6 h-6" />
+                    <span className="text-lg">{x.text}</span>
                   </div>
                 </Link>
               ))
