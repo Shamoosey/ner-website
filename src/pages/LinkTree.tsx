@@ -12,7 +12,9 @@ export function LinkTree() {
         <div>
           <section className="min-h-20 px-4 py-8">
             <div className="flex justify-center">
-              <img src={logo} alt="Main Logo" className="w-full max-w-5xl" />
+              <Link to={"/"}>
+                <img src={logo} alt="Main Logo" className="w-full max-w-5xl cursor-pointer" />
+              </Link>
             </div>
           </section>
           <div className="flex flex-col gap-2">
