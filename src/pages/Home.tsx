@@ -1,5 +1,4 @@
 import logo from "../assets/NER-Logo.svg";
-import TVDinnerArt from "../assets/TV-Dinner_EP-Art.jpg";
 import { Button } from "../components/Button";
 import { ShowItem } from "../components/ShowItem";
 import { Footer } from "../components/Footer";
@@ -36,15 +35,13 @@ function Home() {
           <div className="flex flex-col w-full max-w-5xl">
             <div className="flex">
               <div className="flex flex-col gap-2 pb-6">
-                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">
-                  EP "TV Dinner", OUT MAY 28, 2026
-                </span>
+                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner", OUT MAY 28, 2026</span>
                 <div>
                   <Button className="px-8 py-1.5">LISTEN NOW</Button>
                 </div>
               </div>
             </div>
-            <img src={TVDinnerArt} className="w-full max-w-5xl self-center" />
+            <img src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg" className="w-full max-w-5xl self-center" />
           </div>
         </div>
       </section>
