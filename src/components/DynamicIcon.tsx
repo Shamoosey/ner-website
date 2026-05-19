@@ -1,4 +1,5 @@
 import { IoIosMail } from "react-icons/io";
+import { IoLink } from "react-icons/io5";
 import { SiApplemusic, SiBandcamp, SiInstagram, SiSpotify, SiYoutube } from "react-icons/si";
 
 const iconMap = {
@@ -8,6 +9,7 @@ const iconMap = {
   instagram: SiInstagram,
   bandcamp: SiBandcamp,
   applemusic: SiApplemusic,
+  link: IoLink,
 } as const;
 
 type IconKey = keyof typeof iconMap;

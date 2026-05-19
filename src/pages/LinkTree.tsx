@@ -7,7 +7,7 @@ import { Spinner } from "../components/Spinner";
 export function LinkTree() {
   const { data = [], isLoading } = useLinkTree();
   return (
-    <div className="bg-brown w-full h-screen flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')]">
+    <div className="bg-brown w-full h-screen flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')] min-w-80">
       <section className="flex justify-center text-paler font-family-lato ">
         <div>
           <section className="min-h-20 px-4 py-8">
@@ -17,7 +17,7 @@ export function LinkTree() {
               </Link>
             </div>
           </section>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mx-4">
             {isLoading ? (
               <div className="flex justify-center mt-12">
                 <Spinner />
