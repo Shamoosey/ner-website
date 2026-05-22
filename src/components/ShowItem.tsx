@@ -10,7 +10,7 @@ export function ShowItem(props: ShowItemProps) {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between font-bold flex-col md:flex-row">
-        <span className="uppercase">
+        <span className="uppercase pb-1">
           {new Date(props.data.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -18,24 +18,24 @@ export function ShowItem(props: ShowItemProps) {
             timeZone: "UTC",
           })}
         </span>
-        <span className="uppercase">
+        <span className="uppercase pb-1">
           {new Date(props.data.date).toLocaleDateString("en-US", {
             weekday: "long",
             timeZone: "UTC",
           })}
         </span>
-        <span className="uppercase">@{props.data.location}</span>
+        <span className="uppercase pb-1">@{props.data.location}</span>
       </div>
-      <div className="text-xl italic">
+      <div className="text-2xl italic pb-2">
         <span className="capitalize">{props.data.title}</span>
       </div>
-      <div className="pt-2 pb-4 ">
+      <div className="pb-4">
         <span>w/ </span>
         <span className="capitalize">{props.data.featuring}</span>
       </div>
       <div>
         <Link to={props.data.ticketUrl}>
-          <Button>TICKETS</Button>
+          <Button className="px-8 py-1.5">TICKETS</Button>
         </Link>
       </div>
     </div>

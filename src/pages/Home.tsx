@@ -15,7 +15,7 @@ function Home() {
   }
 
   return (
-    <div className="bg-brown md:min-h-240 flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')] font-family-lato">
+    <div className="bg-brown md:min-h-240 flex flex-col md:bg-fixed bg-scroll bg-center bg-cover bg-[url('/bg-full.jpg')] font-family-lato">
       <section>
         <div className="flex flex-row justify-end px-4 md:px-8 py-8">
           <div className="font-normal text-paler flex gap-8 align-center">
@@ -25,18 +25,20 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="md:min-h-160 min-h-80 px-4 md:px-8 py-8">
+      <section className="md:min-h-220 min-h-80 px-4 md:px-8 md:py-64">
         <div className="flex justify-center">
           <img src={logo} alt="Main Logo" className="w-full max-w-5xl" />
         </div>
       </section>
-      <section className="md:min-h-240">
+      <section className="md:min-h-240 md:pb-48 pb-28">
         <div className="flex flex-col items-center px-4 md:px-8">
           <div className="flex flex-col w-full max-w-5xl">
             <div className="flex">
               <div className="flex flex-col gap-2 pb-6">
                 <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner", OUT MAY 28, 2026</span>
-                <div>{/* <Button className="px-8 py-1.5">LISTEN NOW</Button> */}</div>
+                {/* <div>
+                  <Button className="px-8 py-1.5 text-lg">LISTEN NOW</Button>
+                </div> */}
               </div>
             </div>
             <img src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg" className="w-full max-w-5xl self-center" />
@@ -49,7 +51,7 @@ function Home() {
             <div className="mb-8">
               <span className="font-family-times text-4xl italic font-bold">UPCOMING SHOWS</span>
             </div>
-            <div className="flex flex-col md:max-w-2xl w-full gap-10 mt-4">
+            <div className="flex flex-col md:max-w-[500px] w-full gap-10 mt-4">
               {getActiveShows().length == 0 ? (
                 <div>
                   <span className="text-lg">More shows coming soon...</span>

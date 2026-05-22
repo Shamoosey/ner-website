@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { YoutubeIcon } from "./icons/YoutubeIcon";
 import SpotifyIcon from "./icons/SpotifyIcon";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export function Footer() {
   return (
@@ -17,6 +18,9 @@ export function Footer() {
           </Link>
           <Link to="https://www.instagram.com/naked.elevator.ride">
             <InstagramIcon size={28} />
+          </Link>
+          <Link to="/links">
+            <HiOutlineExternalLink size={28} className="text-paler" />
           </Link>
         </div>
       </div>
