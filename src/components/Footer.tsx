@@ -10,9 +10,9 @@ export function Footer() {
       <div className="flex justify-center py-18 ">
         <div className="flex gap-4 md:max-w-5xl">
           <span className="text-paler italic font-family-lato font-bold">naked.elevator.ride@gmail.com</span>
-          {/* <Link to="">
+          <Link to="https://open.spotify.com/artist/6bkoXGeOLmLRJo5XgIS8fr?si=iaPqTraoQtKk1aeg45cH7w">
             <SpotifyIcon size={28} />
-          </Link> */}
+          </Link>
           <Link to="https://www.youtube.com/@NakedElevatorRide">
             <YoutubeIcon size={28} />
           </Link>

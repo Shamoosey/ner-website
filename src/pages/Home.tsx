@@ -3,6 +3,7 @@ import { Button } from "../components/Button";
 import { ShowItem } from "../components/ShowItem";
 import { Footer } from "../components/Footer";
 import { useShowData } from "../hooks/useShowData";
+import { Link } from "react-router";
 
 function Home() {
   const { data = [] } = useShowData();
@@ -35,10 +36,12 @@ function Home() {
           <div className="flex flex-col w-full max-w-5xl">
             <div className="flex">
               <div className="flex flex-col gap-2 pb-6">
-                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner", OUT MAY 28, 2026</span>
-                {/* <div>
-                  <Button className="px-8 py-1.5 text-lg">LISTEN NOW</Button>
-                </div> */}
+                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner" OUT NOW!</span>
+                <div>
+                  <Link to="https://open.spotify.com/album/6CguFsYMrbkHkfYWd6bSnN?si=81lMZKDPQFmHlMqsTAI31A">
+                    <Button className="px-8 py-1.5 text-lg">LISTEN NOW</Button>
+                  </Link>
+                </div>
               </div>
             </div>
             <img src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg" className="w-full max-w-5xl self-center" />
