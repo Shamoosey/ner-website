@@ -11,7 +11,7 @@ export function LinkTree() {
       <section className="flex justify-center text-paler font-family-lato ">
         <div>
           <section className="min-h-20 px-4 py-8">
-            <div className="flex justify-center">
+            <div className="flex justify-center ">
               <Link to={"/"}>
                 <img src={logo} alt="Main Logo" className="w-full max-w-5xl cursor-pointer" />
               </Link>
@@ -25,8 +25,10 @@ export function LinkTree() {
             ) : (
               data.map((x, i) => (
                 <Link to={x.url} key={i}>
-                  <div className="flex justify-start items-center gap-4 text-paler bg-dark rounded p-3 hover:text-dark hover:bg-paler transition duration-150 cursor-pointer">
-                    <DynamicIcon name={x.icon} className="w-6 h-6" />
+                  <div className="flex justify-start items-center gap-4 text-paler bg-dark rounded p-3 hover:text-dark hover:bg-paler transition duration-150 cursor-pointer max-w-md">
+                    <div>
+                      <DynamicIcon name={x.icon} className="w-6 h-6" />
+                    </div>
                     <span className="text-lg">{x.text}</span>
                   </div>
                 </Link>
