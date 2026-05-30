@@ -16,7 +16,7 @@ function Home() {
   }
 
   return (
-    <div className="bg-brown md:min-h-240 flex flex-col md:bg-fixed bg-scroll bg-center bg-cover bg-[url('/bg-full.jpg')] font-family-lato">
+    <div className="bg-brown md:min-h-240 flex flex-col md:bg-fixed bg-scroll bg-center bg-cover bg-[url('/bg-full.jpg')] font-family-lato min-w-[400px]">
       <section>
         <div className="flex flex-row justify-end px-4 md:px-8 py-8">
           <div className="font-normal text-paler flex gap-8 align-center">

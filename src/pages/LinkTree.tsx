@@ -7,7 +7,7 @@ import { Spinner } from "../components/Spinner";
 export function LinkTree() {
   const { data = [], isLoading } = useLinkTree();
   return (
-    <div className="bg-brown w-full h-screen flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')] min-w-80">
+    <div className="bg-brown w-full min-h-screen min-h-[100dvh] flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')] min-w-[300px]">
       <section className="flex justify-center text-paler font-family-lato ">
         <div>
           <section className="min-h-20 px-4 py-8">
