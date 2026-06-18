@@ -4,6 +4,7 @@ import { ShowItem } from "../components/ShowItem";
 import { Footer } from "../components/Footer";
 import { useShowData } from "../hooks/useShowData";
 import { Link } from "react-router";
+import SpotifyPlayer from "../components/SpotifyPlayer";
 
 function Home() {
   const { data = [] } = useShowData();
@@ -31,12 +32,14 @@ function Home() {
           <img src={logo} alt="Main Logo" className="w-full max-w-5xl" />
         </div>
       </section>
-      <section className="md:min-h-240 md:pb-48 pb-28">
+      <section className="md:min-h-200 md:pb-24 pb-28">
         <div className="flex flex-col items-center px-4 md:px-8">
           <div className="flex flex-col w-full max-w-5xl">
             <div className="flex">
               <div className="flex flex-col gap-2 pb-6">
-                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner" OUT NOW!</span>
+                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">
+                  EP "TV Dinner" OUT NOW!
+                </span>
                 <div>
                   <Link to="https://open.spotify.com/album/6CguFsYMrbkHkfYWd6bSnN?si=81lMZKDPQFmHlMqsTAI31A">
                     <Button className="px-8 py-1.5 text-lg">LISTEN NOW</Button>
@@ -44,7 +47,17 @@ function Home() {
                 </div>
               </div>
             </div>
-            <img src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg" className="w-full max-w-5xl self-center" />
+            <img
+              src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg"
+              className="w-full max-w-5xl self-center"
+            />
+            <div className="mt-16">
+              <SpotifyPlayer
+                type="album"
+                url="https://open.spotify.com/album/6CguFsYMrbkHkfYWd6bSnN?si=lmQeZ5zNRYyWioM8F5Blsw"
+                height={380}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -52,7 +65,9 @@ function Home() {
         <div className="flex justify-center">
           <div className="mx-auto w-full max-w-5xl py-16">
             <div className="mb-8">
-              <span className="font-family-times text-4xl italic font-bold">UPCOMING SHOWS</span>
+              <span className="font-family-times text-4xl italic font-bold">
+                UPCOMING SHOWS
+              </span>
             </div>
             <div className="flex flex-col md:max-w-[500px] w-full gap-10 mt-4">
               {getActiveShows().length == 0 ? (
