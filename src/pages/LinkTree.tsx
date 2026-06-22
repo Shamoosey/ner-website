@@ -1,20 +1,24 @@
 import logo from "../assets/NER-Logo.svg";
 import { useLinkTree } from "../hooks/useLinkTree";
 import { DynamicIcon } from "../components/DynamicIcon";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { Spinner } from "../components/Spinner";
 
 export function LinkTree() {
+  const navigate = useNavigate();
   const { data = [], isLoading } = useLinkTree();
   return (
     <div className="bg-brown w-full min-h-screen min-h-[100dvh] flex flex-col md:bg-fixed bg-scroll bg-center bg-cover md:bg-[url('/bg-full.jpg')] bg-[url('/bg-full.jpg')] min-w-[300px]">
       <section className="flex justify-center text-paler font-family-lato ">
         <div>
-          <section className="min-h-20 px-4 py-8">
-            <div className="flex justify-center ">
-              <Link to={"/"}>
-                <img src={logo} alt="Main Logo" className="w-full max-w-5xl cursor-pointer" />
-              </Link>
+          <section className="min-h-40 min-w-20 px-4 py-8">
+            <div className="flex justify-center min-w-80">
+              <img
+                src={logo}
+                alt="Main Logo"
+                className="w-full max-w-5xl cursor-pointer"
+                onClick={() => navigate("/")}
+              />
             </div>
           </section>
           <div className="flex flex-col gap-2 mx-4">
