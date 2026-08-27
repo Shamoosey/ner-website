@@ -48,7 +48,7 @@ function Home() {
               </div>
             </div>
             <img
-              src="https://res.cloudinary.com/shamoose/image/upload/v1779128547/NER/TV-Dinner_EP-Art_zhvjed.jpg"
+              src="https://res.cloudinary.com/shamoose/image/upload/v1787854781/NER/TV-Dinner_EP_Final-Cover.jpg"
               className="w-full max-w-5xl self-center"
             />
             <div className="mt-16">
