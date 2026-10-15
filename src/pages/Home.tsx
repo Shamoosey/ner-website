@@ -37,9 +37,7 @@ function Home() {
           <div className="flex flex-col w-full max-w-5xl">
             <div className="flex">
               <div className="flex flex-col gap-2 pb-6">
-                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">
-                  EP "TV Dinner" OUT NOW!
-                </span>
+                <span className="font-bold text-xl text-paler bg-dark p-1.5 uppercase">EP "TV Dinner" OUT NOW!</span>
                 <div>
                   <Link to="https://open.spotify.com/album/6CguFsYMrbkHkfYWd6bSnN?si=81lMZKDPQFmHlMqsTAI31A">
                     <Button className="px-8 py-1.5 text-lg">LISTEN NOW</Button>
@@ -48,7 +46,8 @@ function Home() {
               </div>
             </div>
             <img
-              src="https://res.cloudinary.com/shamoose/image/upload/v1787854781/NER/TV-Dinner_EP_Final-Cover.jpg"
+              loading="lazy"
+              src="https://ner.tor1.cdn.digitaloceanspaces.com/TV-Dinner_EP_Final-Cover.jpg"
               className="w-full max-w-5xl self-center"
             />
             <div className="mt-16">
@@ -65,9 +64,7 @@ function Home() {
         <div className="flex justify-center">
           <div className="mx-auto w-full max-w-5xl py-16">
             <div className="mb-8">
-              <span className="font-family-times text-4xl italic font-bold">
-                UPCOMING SHOWS
-              </span>
+              <span className="font-family-times text-4xl italic font-bold">UPCOMING SHOWS</span>
             </div>
             <div className="flex flex-col md:max-w-[500px] w-full gap-10 mt-4">
               {getActiveShows().length == 0 ? (
